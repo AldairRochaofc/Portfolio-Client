@@ -197,7 +197,7 @@ export default function Home() {
               size="lg"
               className="rounded-full dark:border-[#5c3a70] dark:text-[#e0d5e6] dark:hover:bg-[#3d2150]"
             >
-              <Mail className="mr-2 h-4 w-4" /> contato@galeriadearte.com
+              <Mail className="mr-2 h-4 w-4" /> thvrtiins@gmail.com
             </Button>
           </motion.div>
         </div>
