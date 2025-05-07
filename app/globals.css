@@ -1,0 +1,158 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 222.2 84% 4.9%;
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+    --primary: 262.1 83.3% 57.8%;
+    --primary-foreground: 210 40% 98%;
+    --secondary: 210 40% 96.1%;
+    --secondary-foreground: 222.2 47.4% 11.2%;
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+    --accent: 210 40% 96.1%;
+    --accent-foreground: 222.2 47.4% 11.2%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 262.1 83.3% 57.8%;
+    --radius: 0.5rem;
+    --chart-1: 262.1 83.3% 57.8%;
+    --chart-2: 316 70% 50%;
+    --chart-3: 30 80% 50%;
+    --chart-4: 200 80% 50%;
+    --chart-5: 120 80% 50%;
+  }
+
+  .dark {
+    /* Cores base para o tema escuro */
+    --background: 283 70% 15%;
+    /* Roxo escuro para fundo principal */
+    --foreground: 280 15% 85%;
+    /* Texto claro com tom levemente roxo */
+
+    /* Cores para cards e elementos */
+    --card: 283 60% 12%;
+    /* Roxo mais escuro para cards */
+    --card-foreground: 280 15% 85%;
+    /* Texto para cards */
+
+    /* Cores para popovers */
+    --popover: 283 60% 10%;
+    /* Roxo muito escuro para popovers */
+    --popover-foreground: 280 15% 85%;
+    /* Texto para popovers */
+
+    /* Cores primárias para botões */
+    --primary: 301 32% 43%;
+    /* #924A90 para botões */
+    --primary-foreground: 280 15% 90%;
+    /* Texto para botões */
+
+    /* Cores secundárias */
+    --secondary: 260 30% 20%;
+    /* Azul-roxo escuro para elementos secundários */
+    --secondary-foreground: 280 15% 85%;
+    /* Texto para elementos secundários */
+
+    /* Cores silenciadas */
+    --muted: 283 30% 8%;
+    /* Roxo muito escuro para elementos silenciados */
+    --muted-foreground: 280 10% 70%;
+    /* Texto silenciado */
+
+    /* Cores de destaque */
+    --accent: 320 30% 20%;
+    /* Magenta escuro para acentos */
+    --accent-foreground: 280 15% 85%;
+    /* Texto para acentos */
+
+    /* Outras cores */
+    --destructive: 0 50% 30%;
+    /* Vermelho escuro */
+    --destructive-foreground: 280 15% 90%;
+    /* Texto para destrutivo */
+    --border: 283 40% 25%;
+    /* Bordas em roxo médio-escuro */
+    --input: 283 30% 20%;
+    /* Fundos de input em roxo escuro */
+    --ring: 301 32% 43%;
+    /* Anéis de foco em roxo médio */
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+.aspect-w-4 {
+  position: relative;
+  padding-bottom: calc(var(--tw-aspect-h) / var(--tw-aspect-w) * 100%);
+}
+
+.aspect-w-4>* {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.aspect-w-4.aspect-h-3 {
+  --tw-aspect-w: 4;
+  --tw-aspect-h: 3;
+}
+
+/* Cores personalizadas para o tema escuro */
+.dark {
+  /* Fundos principais */
+  --bg-main: #1a0b26;
+  /* Roxo muito escuro para fundo principal */
+  --bg-alt: #2d1241;
+  /* Roxo escuro para fundos alternativos */
+  --bg-card: #231030;
+  /* Roxo escuro para cards */
+
+  /* Cores de botões e elementos interativos */
+  --btn-primary: #924a90;
+  /* Roxo médio para botões */
+  --btn-hover: #7d3e7b;
+  /* Roxo médio-escuro para hover */
+  --btn-secondary: #3d2a5c;
+  /* Roxo-azulado escuro para botões secundários */
+
+  /* Cores de texto */
+  --text-primary: #e0d5e6;
+  /* Texto principal com tom roxo claro */
+  --text-secondary: #b8a2c5;
+  /* Texto secundário com tom roxo médio */
+  --text-muted: #8a7a96;
+  /* Texto silenciado com tom roxo escuro */
+
+  /* Cores de destaque */
+  --accent-1: #b76fb5;
+  /* Roxo médio-claro para destaques */
+  --accent-2: #4a3670;
+  /* Roxo-azulado para destaques alternativos */
+
+  /* Cores de borda */
+  --border-main: #3d2150;
+  /* Roxo médio-escuro para bordas */
+  --border-light: #5c3a70;
+  /* Roxo médio para bordas mais claras */
+}
